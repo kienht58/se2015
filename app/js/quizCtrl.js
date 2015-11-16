@@ -1,8 +1,12 @@
-quizApp.controller('QuizCtrl', function QuizCtrl($scope, $resource, $location, quizModel){
+quizApp.controller('QuizCtrl', function QuizCtrl($rootScope, $scope, $resource, $location, quizModel, userModel){
 	$resource('fixtures/questions.json').get(function (data) {
 		$scope.quiz = quizModel.initialize(data);
 		$scope.currentPosition = -1;
 		$scope.updatePage();
+	});
+	
+	$resource('fixtures/user.json').get(function(data) {
+		$scope.user = userModel.initialize(data);
 	});
 	
 	$scope.hasNext = function() {
@@ -14,7 +18,16 @@ quizApp.controller('QuizCtrl', function QuizCtrl($scope, $resource, $location, q
 	};
 	
 	$scope.submitAnswer = function() {
+		var score = $scope.currentQuestion.score;
+		angular.forEach($scope.currentQuestion.options, function(o) {
+			if($scope.currentResponse == o.choice && o.is_correct) {
+				$scope.user.correct = $scope.user.correct + 1;
+				$scope.user.score = $scope.user.score + score;
+			}
+		});
+		
 		$scope.next();
+
 	};
 	
 	$scope.isAnswered = function () {
@@ -28,7 +41,9 @@ quizApp.controller('QuizCtrl', function QuizCtrl($scope, $resource, $location, q
 			$scope.updatePage();
 		}
 		else {
-		$location.path('/result');
+			$rootScope.quizSize = $scope.quiz.questions.length;
+			$rootScope.user = $scope.user;
+			$location.path('/result');
 		}
 	}
 	
