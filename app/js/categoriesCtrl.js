@@ -7,4 +7,8 @@ quizApp.controller('CategoriesCtrl', function CategoriesCtrl($scope, $resource, 
 	$scope.startQuiz = function() {
 		$location.path('/quiz');
 	};
+	
+	$scope.back = function() {
+		$location.path('/');
+	};
 })
