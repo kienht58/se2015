@@ -4,14 +4,14 @@
 	<div class="col-lg-9">
 		<div class="container">
 			<div class="col-xs-10">
-				<div class="col-sm-4 item" ng-repeat="item in categories">
+				<div class="col-sm-4 item" ng-repeat="category in categories">
 					<a class="link" data-toggle="modal" ng-click="startQuiz()">
 						<div class="caption">
 							<div class="caption-content">
 								<i class="fa fa-search-plus fa-3x"></i>
 							</div>
 						</div>
-						<img src="{{item.image}}" class="img-responsive" alt="">
+						<img src="{{category.imgUrl}}" class="img-responsive" alt="">
 					</a>
 				</div>
 			</div>

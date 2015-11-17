@@ -7,12 +7,16 @@
 	<section class="content">
 		<div class="question">{{currentQuestion.description}}</div>
 		<div class="options">
-			<label class="option" ng-repeat="option in currentQuestion.options">
+			<label class="option" ng-hide="currentQuestion.isFillIn()" ng-repeat="option in currentQuestion.options">
 				<span class="inner">
 					<input type="radio" value="{{option.choice}}" ng-model="$parent.currentResponse">
 					<span>{{option.choice}}</span>
 				</span>
 			</label>
+			
+			<span ng-show="currentQuestion.isFillIn()">
+				<input type="text" ng-model="currentResponse">
+			</span>
 		</div>
 	</section>
 	<footer class="footer">
