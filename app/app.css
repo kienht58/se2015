@@ -21,7 +21,7 @@
     width: 500px;
 }
 
-.quiz-body .home-view, .user-profile, .categories {
+.quiz-body .home-view, .user-profile, .categories, .result-view {
     text-align: center;
 }
 
@@ -106,6 +106,38 @@
 .quiz-body .user-profile .user-img {
 	width: 250px;
 	height: 250px;
+}
+
+.quiz-body .result-view {
+    text-align: center;
+}
+
+.quiz-body .result-view .result-container header {
+    color: #a32a13;
+    font-size: 36px;
+}
+
+.quiz-body .result-view .result-container .result-content {
+    width: 500px;
+    height: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    background: black;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, .5);
+    padding: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 32px;
+    font-family: cursive;
+    border-radius: 2px;
+}
+
+.quiz-body .result-view .button-bar{
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 .quiz-body .help-view {
