@@ -21,7 +21,7 @@
     width: 500px;
 }
 
-.quiz-body .home-view, .user-profile {
+.quiz-body .home-view, .user-profile, .categories {
     text-align: center;
 }
 
@@ -79,6 +79,14 @@
 .quiz-body button:active {
     background: transparent;
 	color: white;
+}
+
+.quiz-body .categories .container {
+	margin: 2% 50px 30px 65px;
+}
+
+.quiz-body .categories .container .link {
+	margin : 4px;
 }
 
 .quiz-body .user-profile .container {
