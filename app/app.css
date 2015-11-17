@@ -21,7 +21,7 @@
     width: 500px;
 }
 
-.quiz-body .home-view {
+.quiz-body .home-view, .user-profile {
     text-align: center;
 }
 
@@ -79,4 +79,40 @@
 .quiz-body button:active {
     background: transparent;
 	color: white;
+}
+
+.quiz-body .user-profile .container {
+	text-align: left;
+	margin-top: 2%;
+}
+
+.quiz-body .user-profile .container .panel-transparent {
+	background: none;
+}
+
+.quiz-body .user-profile .user-rank {
+	text-align: center;
+	font-size: 30px;
+}
+
+.quiz-body .user-profile .user-img {
+	width: 250px;
+	height: 250px;
+}
+
+.quiz-body .help-view {
+    text-align: center;
+}
+
+.quiz-body .help-view ul{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 600px;
+    line-height: 2;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: verdana;
+    list-style: square;
 }

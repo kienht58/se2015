@@ -3,6 +3,10 @@ quizApp.controller('HomeCtrl', function($scope, $location) {
 		$location.path('/categories');
 	};
 	
+	$scope.seeProfile = function() {
+		$location.path('/profile');
+	};
+	
 	$scope.help = function() {
 		$location.path('help');
 	};
