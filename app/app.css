@@ -1,5 +1,6 @@
 .quiz-body{
-    background-image: url("https://laurenmurphy.files.wordpress.com/2013/09/music.jpg");
+    /*background-image: url("https://laurenmurphy.files.wordpress.com/2013/09/music.jpg");*/
+	background-image: url('img/background.jpg');
     background-size: 105%;
     font-family: arial, helvetica, sans serif;
     margin: 0px;
@@ -21,7 +22,7 @@
     width: 500px;
 }
 
-.quiz-body .home-view, .user-profile, .categories, .result-view {
+.quiz-body .home-view, .user-profile, .categories, .result-view, .quiz-view {
     text-align: center;
 }
 
@@ -49,12 +50,17 @@
     margin-bottom: 30px;
 }
 
+.quiz-body button, #field {
+	cursor: pointer;
+}
+
 .quiz-body button {
     height: 60px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 30px;
     width: 200px;
+	margin-top: 5px;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -155,4 +161,42 @@
     margin-bottom: 50px;
     font-family: verdana;
     list-style: square;
+}
+
+.quiz-body .quiz-view  {
+	padding-top: 100px;
+}
+
+.quiz-body .quiz-view .panel {
+	boder: 10px;
+}
+
+.quiz-body .quiz-view .question {
+	color: #000;
+	margin-top: -5px;
+}
+
+.quiz-body .quiz-view .options {
+	color: blue;
+}
+
+.quiz-body .quiz-view .options  #typeFill{
+	color: blue;
+	font-weight: bold;
+}
+
+.quiz-body .quiz-view .panel-footer :hover{
+	background: transparent;
+	color: blue;
+}
+
+.quiz-body .categories img {
+	height: 200px;
+	width: 100%;
+	border: 5px solid white;
+	transition: 1s;
+}
+
+.quiz-body .categories img:hover {
+	width: 90%;
 }
