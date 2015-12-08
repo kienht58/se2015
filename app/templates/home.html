@@ -1,6 +1,9 @@
 <section class="home-view" ng-controller="HomeCtrl">
 	<div class="logo"></div>
-	<button ng-controller="FacebookController" ng-click="fbLogin()">FACEBOOK</button>
+	<div class="login-section">
+		<button ng-controller="FacebookController" ng-click="fbLogin()">FACEBOOK</button>
+		<span class="profile"><label class="username">{{userName}}</label><img src="{{userPicture.data.url}}" alt="picture"></img></span>
+	</div>
 	<div class="slogan">Let's xàm le and LOL</div>
 	<div class="button-bar">
 		<button ng-click="chooseCategory()">Start</button>

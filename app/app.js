@@ -14,7 +14,7 @@ var quizApp = angular.module('quizApp', ['ngRoute', 'ngResource']).config(['$rou
 
 window.fbAsyncInit = function() {
     FB.init({
-      appId      : '800598230085740',
+      appId      : '1711548379061566',
       xfbml      : true,
       version    : 'v2.5'
     });

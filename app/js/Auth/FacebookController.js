@@ -1,5 +1,5 @@
 angular.module('quizApp')
-.controller('FacebookController', function ($scope) {
+.controller('FacebookController', function ($scope, $rootScope) {
 	$scope.user = {}
 	$scope.fbLogin = function() {
 		FB.login(function(response) {
@@ -10,7 +10,9 @@ angular.module('quizApp')
 	    		$scope.user.email = response.email
 	    		$scope.user.password = response.id
 	    		$scope.user.name = response.name
+				$rootScope.userName = response.name
 	    		$scope.user.picture = response.picture
+				$rootScope.userPicture = response.picture
 	    		$scope.user.score = 0;
 	    		console.log($scope.user)
 	    	})
