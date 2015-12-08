@@ -1,6 +1,7 @@
 .quiz-body{
     /*background-image: url("https://laurenmurphy.files.wordpress.com/2013/09/music.jpg");*/
-	background-image: url('img/background.jpg');
+	/*background-image: url('img/background.jpg');*/
+    background-color: black;
     background-size: 105%;
     font-family: arial, helvetica, sans serif;
     margin: 0px;
@@ -199,4 +200,8 @@
 
 .quiz-body .categories img:hover {
 	width: 90%;
+}
+
+.title {
+    font-size: 50px;
 }

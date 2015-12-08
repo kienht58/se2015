@@ -3,7 +3,7 @@ quizApp.factory('categoryModel', function() {
 		create: function(data) {
 			var category = {};
 			category.id = data.id;
-			category.imgUrl = data.iconUrl;
+			category.imgUrl = data.urlImage;
 			category.name = data.name;
 			
 			return category;

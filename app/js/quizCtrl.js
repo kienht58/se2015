@@ -1,5 +1,6 @@
 quizApp.controller('QuizCtrl', function QuizCtrl($rootScope, $scope, $resource, $location, quizModel, userModel){
-	$resource('fixtures/questions.json').get(function (data) {
+	$resource('https://letlol.herokuapp.com/api/categories/' + $rootScope.categoryID).get(function (data) {
+		console.log($rootScope.categoryID);
 		$scope.quiz = quizModel.initialize(data);
 		$scope.currentPosition = -1;
 		$scope.updatePage();

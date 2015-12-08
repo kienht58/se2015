@@ -1,6 +1,6 @@
 quizApp.controller("LoginCtrl", function($scope, $location) {
 	$scope.isValidUser = function() {
-	return true;
+		return true;
 	}
 	
 	$scope.currentTab = 1;
