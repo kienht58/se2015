@@ -1,8 +1,12 @@
 quizApp.controller('QuizCtrl', function QuizCtrl($rootScope, $scope, $resource, $location, quizModel, userModel){
 	$resource('https://letlol.herokuapp.com/api/categories/' + $rootScope.categoryID).get(function (data) {
-		console.log($rootScope.categoryID);
 		$scope.quiz = quizModel.initialize(data);
 		$scope.currentPosition = -1;
+		
+		$rootScope.$on('timer_ended', function () {
+            $scope.next();
+        });
+		
 		$scope.updatePage();
 	});
 	
@@ -40,8 +44,10 @@ quizApp.controller('QuizCtrl', function QuizCtrl($rootScope, $scope, $resource, 
 		if(valid == true) {
 			$scope.currentResponse = "";
 			$scope.updatePage();
+			$rootScope.$broadcast('restart_timer');
 		}
 		else {
+			$rootScope.$broadcast('game_over');
 			$rootScope.quizSize = $scope.quiz.questions.length;
 			$rootScope.user = $scope.user;
 			$location.path('/result');

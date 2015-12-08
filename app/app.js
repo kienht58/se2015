@@ -1,4 +1,4 @@
-var quizApp = angular.module('quizApp', ['ngRoute', 'ngResource']).config(['$routeProvider', function($routeProvider) {
+var quizApp = angular.module('quizApp', ['ngRoute', 'ngResource', 'components']).config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
 		when('/', {templateUrl: '../app/templates/home.html'}).
 		when('/login', { templateUrl: '../app/templates/login.html'}).
